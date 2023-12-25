@@ -43,11 +43,12 @@ public class CalculatorServiceTest {
 	
 	//test method to add  two numbers
 	
-	@Test
-	public void addTwoNumberTest() {
+	@Test(timeout = 3000)
+	public void addTwoNumberTest() throws InterruptedException {
 		System.out.println("execution thread is in addTwoNumberTest Method");
 		int result=CalculatorService.addTwoNumbers(12, 13);
 		
+		Thread.sleep(4000);
 		int expectedResult=25;
 		org.junit.Assert.assertEquals(expectedResult, result);
 		
