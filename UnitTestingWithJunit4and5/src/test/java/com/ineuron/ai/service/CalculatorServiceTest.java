@@ -2,8 +2,10 @@ package com.ineuron.ai.service;
 
 import java.util.Date;
 
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -24,6 +26,18 @@ public class CalculatorServiceTest {
 	public static void intialize() {
 		System.out.println("before all test cases:");
 		System.out.println("started test"+new Date());
+	}
+	
+	
+	//executes before and after each test case. not a class level annotaiton .method level 
+	//annotation so no need of void.
+	@Before
+	public  void initial() {
+		System.out.println("aap har test case se pehle chaliyega");
+	}
+	@After
+	public void baadMeinChalega() {
+		System.out.println("aap har test case ke baad chaliyega");
 	}
 	
 	
